@@ -1,3 +1,46 @@
+/* ======================================= */
+/* ESTILOS DE FONDO - VERSIÓN FINAL CORREGIDA */
+/* ======================================= */
+
+/* Asegura que el contenedor principal de la app se extienda para contener el fondo */
+html, body, #root, .d-flex.flex-column.min-vh-100 {
+    height: 100%;
+    margin: 0; /* Asegúrate de que no haya márgenes por defecto */
+    padding: 0; /* Asegúrate de que no haya padding por defecto */
+}
+
+/* Estilo para el contenedor que aplica la imagen de fondo */
+.homepage-background {
+    /* 👈 ¡RUTA DEFINITIVA Y VERIFICADA! */
+    background-image: url('./assets/Utensilios.jpeg'); 
+    
+    background-size: cover;          /* Hace que la imagen cubra todo el espacio sin distorsionarse */
+    background-position: center center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;    /* Evita que la imagen se repita */
+    background-attachment: fixed;    /* Mantiene la imagen fija al hacer scroll */
+    
+    /* Posicionamiento y tamaño para que cubra toda la ventana */
+    position: fixed; /* 'fixed' es mejor para fondos que deben cubrir toda la ventana y no moverse con el scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Envía la capa de fondo detrás del contenido */
+    
+    /* Ajuste de opacidad para que el contenido de texto sea legible */
+    opacity: 0.8; /* Puedes ajustar este valor si quieres un fondo más o menos visible */
+}
+
+/* Para asegurar que el contenido (Container) esté por encima del fondo */
+main {
+    position: relative; /* Es importante para que z-index funcione correctamente */
+    z-index: 1; /* Coloca el contenido por encima del fondo (z-index: -1) */
+}
+
+/* ======================================= */
+/* CÓDIGO ORIGINAL DE CREATE-REACT-APP (Mantenlo igual) */
+/* ======================================= */
+
 .App {
   text-align: center;
 }
@@ -14,7 +57,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #a1b1d1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

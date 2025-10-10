@@ -20,7 +20,7 @@ const CustomNavbar = () => {
         <BNavbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">Recetas</Nav.Link>
-            <Nav.Link as={Link} to="/crear" className="btn btn-primary text-white">
+            <Nav.Link as={Link} to="/crear" className="btn btn-primary text-black">
               ➕ Nueva Receta
             </Nav.Link>
           </Nav>

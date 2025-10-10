@@ -27,7 +27,7 @@ body {
 }
 
 .navbar-brand img {
-    max-height: 40px;
+    max-height: 60px;
 }
 
 .homepage-background {
@@ -46,7 +46,7 @@ body {
 
 /* Modificar el contenedor principal para darle padding interno y asegurar el color de fondo sobre el fondo fijo */
 main {
-    background-color: rgba(92, 77, 77, 0.9); /* Fondo blanco semi-transparente para legibilidad */
+    background-color: rgba(194, 180, 180, 0.9); /* Fondo blanco semi-transparente para legibilidad */
     flex-grow: 1; 
     min-height: 100vh; /* Asegura que el main sea visible */
 }
@@ -65,5 +65,5 @@ main {
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.5; /* ¡CLAVE! Nivel de "agua" o transparencia */
+  opacity: 0.9; /* ¡CLAVE! Nivel de "agua" o transparencia */
 }

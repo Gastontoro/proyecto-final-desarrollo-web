@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import DetailPage from './pages/DetailPage';
 import FormPage from './pages/FormPage';
+import RecetasGuardadasPage from './pages/RecetasGuardadasPage'; // Asegúrate de que exista y esté importado
 
 const App = () => {
   return (
@@ -14,19 +15,11 @@ const App = () => {
         <CustomNavbar />
         <main className="flex-grow-1">
           <Routes>
-            {/* Ruteo Estático: Página Principal/Listado */}
             <Route path="/" element={<HomePage />} />
-
-            {/* Ruteo Estático: Página de Creación */}
+            <Route path="/guardadas" element={<RecetasGuardadasPage />} /> {/* Rutas de Recetas Guardadas */}
             <Route path="/crear" element={<FormPage isEdit={false} />} />
-
-            {/* Ruteo Dinámico: Página de Edición */}
             <Route path="/editar/:id" element={<FormPage isEdit={true} />} />
-
-            {/* Ruteo Dinámico: Página de Detalle */}
             <Route path="/receta/:id" element={<DetailPage />} />
-
-            {/* Opcional: Ruta para 404 */}
             <Route path="*" element={<h1 className="text-center mt-5">404 - Página no encontrada</h1>} />
           </Routes>
         </main>
